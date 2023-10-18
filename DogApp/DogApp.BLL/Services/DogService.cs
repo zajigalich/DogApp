@@ -1,5 +1,6 @@
 ﻿using DogApp.DAL.Entities;
 using DogApp.DAL.UnitOfWorks;
+using Microsoft.EntityFrameworkCore;
 
 namespace DogApp.BLL.Services;
 
@@ -24,24 +25,32 @@ public class DogService : IDogService
 	public async Task<Dog> CreateAsync(Dog dog)
 	{
 		await _unitOfWork.DogRepository.CreateAsync(dog);
-		await _unitOfWork.SaveAsync();
+
+		try
+		{
+			await _unitOfWork.SaveAsync();
+		}
+		catch (DbUpdateException)
+		{
+			throw new DogNameAlreadyExistsException(dog.Name);
+		}
 
 		return dog;
 	}
 
 	private static void VerifyPageSizeIsValid(int pageSize)
 	{
-		if (pageSize <= 1)
+		if (pageSize < 1)
 		{
-			throw new ArgumentException("Page size must be greater than 1", nameof(pageSize));
+			throw new ArgumentException("Page size must be greater or equal 1", nameof(pageSize));
 		}
 	}
 
 	private static void VerifyPageNumberIsValid(int pageNumber)
 	{
-		if (pageNumber <= 1)
+		if (pageNumber < 1)
 		{
-			throw new ArgumentException("Page number must be greater than 1", nameof(pageNumber));
+			throw new ArgumentException("Page number must be greater or equal 1", nameof(pageNumber));
 		}
 	}
 }

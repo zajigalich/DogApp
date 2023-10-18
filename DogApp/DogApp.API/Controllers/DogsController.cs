@@ -4,6 +4,7 @@ using DogApp.BLL.DTOs;
 using DogApp.BLL.Services;
 using DogApp.DAL.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 
 namespace DogApp.API.Controllers;
 
@@ -16,7 +17,7 @@ public class DogsController : ControllerBase
 	private readonly IMapper _mapper;
 
 	public DogsController(IDogService dogService, IMapper mapper)
-    {
+	{
 		_dogService = dogService;
 		_mapper = mapper;
 	}
@@ -30,6 +31,7 @@ public class DogsController : ControllerBase
 
 	[HttpGet]
 	[Route("dogs")]
+	[OutputCache(VaryByQueryKeys = new [] {"attribute", "order", "pageNumber", "pageSize"} )]
 	public async Task<IActionResult> GetAll([FromQuery] string? attribute, [FromQuery] string? order, 
 		[FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 5)
 	{
@@ -41,9 +43,11 @@ public class DogsController : ControllerBase
 
 	[HttpPost]
 	[Route("dog")]
-	public async Task<IActionResult> Create([FromBody] AddDogRequest addDogRequest)
+	public async Task<IActionResult> Create([FromBody] AddDogRequest addDogRequest, IOutputCacheStore cacheStore)
 	{
 		var dog = _mapper.Map<Dog>(addDogRequest);
+
+		await cacheStore.EvictByTagAsync("tag-dog", default);
 
 		await _dogService.CreateAsync(dog);
 
