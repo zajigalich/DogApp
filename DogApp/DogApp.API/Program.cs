@@ -1,4 +1,5 @@
 using DogApp.DAL;
+using DogApp.BLL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Configure services from class libs
+builder.Services.ConfigureBusinessLogicLayerServices();
 builder.Services.ConfigureDataAccessLayerServices(builder.Configuration.GetConnectionString("DogsConnectionString")!);
 
 
