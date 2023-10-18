@@ -1,4 +1,5 @@
-﻿using DogApp.DAL.Entities;
+﻿using DogApp.BLL.Exceptions;
+using DogApp.DAL.Entities;
 using DogApp.DAL.UnitOfWorks;
 using Microsoft.EntityFrameworkCore;
 

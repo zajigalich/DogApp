@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.DAL.Tests", "DogApp.
 		{CD2859AB-CE5F-4468-BED4-4BD261798B28} = {CD2859AB-CE5F-4468-BED4-4BD261798B28}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.BLL.Tests", "DogApp.BLL.Tests\DogApp.BLL.Tests.csproj", "{92A814E7-47C1-47C2-B97C-A94604C4B82E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{D9CBD03B-1525-45C6-88BB-97FB2499ABCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9CBD03B-1525-45C6-88BB-97FB2499ABCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9CBD03B-1525-45C6-88BB-97FB2499ABCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92A814E7-47C1-47C2-B97C-A94604C4B82E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A814E7-47C1-47C2-B97C-A94604C4B82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A814E7-47C1-47C2-B97C-A94604C4B82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A814E7-47C1-47C2-B97C-A94604C4B82E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
