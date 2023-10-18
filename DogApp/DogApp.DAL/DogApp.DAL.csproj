@@ -15,10 +15,5 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="UnitOfWorks\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
 	
 </Project>
