@@ -1,0 +1,21 @@
+version: '3.4'
+
+networks:
+  dog-app:
+
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: DogApp.API/Dockerfile
+    networks:
+      - dog-app
+    depends_on:
+      - ms-db
+
+  ms-db:
+    container_name: dog-ms-sql
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    networks:
+      - dog-app

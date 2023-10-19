@@ -2,6 +2,8 @@ using DogApp.DAL;
 using DogApp.BLL;
 using DogApp.API.Mappings;
 using DogApp.API.Middlewares;
+using DogApp.DAL.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +32,16 @@ builder.Services.AddOutputCache(options =>
 });
 
 var app = builder.Build();
+
+// Auto db migration with docker compose 
+using (var serviceScope = app.Services.GetService<IServiceScopeFactory>()?.CreateScope())
+{
+	var context = serviceScope?.ServiceProvider?.GetRequiredService<DogAppDbContext>();
+	if (context != null && context.Database.GetPendingMigrations().Any())
+	{
+		context?.Database?.Migrate();
+	}
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

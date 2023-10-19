@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=S3cur3P@ssW0rd!
+    ports:
+      - "${PORT_API}:80"
+
+  ms-db:
+    environment:
+      SA_PASSWORD: "S3cur3P@ssW0rd!"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "${PORT_MS}:1433"
+    volumes:
+      - type: bind
+        source: ./ms-data
+        target: /var/lib/ms-sql/data

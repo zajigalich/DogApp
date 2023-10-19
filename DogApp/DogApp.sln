@@ -3,27 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.API", "DogApp.API\DogApp.API.csproj", "{DC150BCC-3719-41F1-9EFB-D1CDBC8E10B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogApp.API", "DogApp.API\DogApp.API.csproj", "{DC150BCC-3719-41F1-9EFB-D1CDBC8E10B4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3B9D62F1-2F61-49B1-BDA3-B7BA7F1209C7} = {3B9D62F1-2F61-49B1-BDA3-B7BA7F1209C7}
 		{CD2859AB-CE5F-4468-BED4-4BD261798B28} = {CD2859AB-CE5F-4468-BED4-4BD261798B28}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.DAL", "DogApp.DAL\DogApp.DAL.csproj", "{CD2859AB-CE5F-4468-BED4-4BD261798B28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogApp.DAL", "DogApp.DAL\DogApp.DAL.csproj", "{CD2859AB-CE5F-4468-BED4-4BD261798B28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.BLL", "DogApp.BLL\DogApp.BLL.csproj", "{3B9D62F1-2F61-49B1-BDA3-B7BA7F1209C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogApp.BLL", "DogApp.BLL\DogApp.BLL.csproj", "{3B9D62F1-2F61-49B1-BDA3-B7BA7F1209C7}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CD2859AB-CE5F-4468-BED4-4BD261798B28} = {CD2859AB-CE5F-4468-BED4-4BD261798B28}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.DAL.Tests", "DogApp.DAL.Tests\DogApp.DAL.Tests.csproj", "{D9CBD03B-1525-45C6-88BB-97FB2499ABCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogApp.DAL.Tests", "DogApp.DAL.Tests\DogApp.DAL.Tests.csproj", "{D9CBD03B-1525-45C6-88BB-97FB2499ABCD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CD2859AB-CE5F-4468-BED4-4BD261798B28} = {CD2859AB-CE5F-4468-BED4-4BD261798B28}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.BLL.Tests", "DogApp.BLL.Tests\DogApp.BLL.Tests.csproj", "{92A814E7-47C1-47C2-B97C-A94604C4B82E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogApp.BLL.Tests", "DogApp.BLL.Tests\DogApp.BLL.Tests.csproj", "{92A814E7-47C1-47C2-B97C-A94604C4B82E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.API.Tests", "DogApp.API.Tests\DogApp.API.Tests.csproj", "{754CC1F4-10D1-47A9-9C14-C8386E3763E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DogApp.API.Tests", "DogApp.API.Tests\DogApp.API.Tests.csproj", "{754CC1F4-10D1-47A9-9C14-C8386E3763E4}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{15B59EE6-0DDF-47C3-9B3B-764EE4DA17E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{754CC1F4-10D1-47A9-9C14-C8386E3763E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{754CC1F4-10D1-47A9-9C14-C8386E3763E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{754CC1F4-10D1-47A9-9C14-C8386E3763E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B59EE6-0DDF-47C3-9B3B-764EE4DA17E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B59EE6-0DDF-47C3-9B3B-764EE4DA17E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B59EE6-0DDF-47C3-9B3B-764EE4DA17E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B59EE6-0DDF-47C3-9B3B-764EE4DA17E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
