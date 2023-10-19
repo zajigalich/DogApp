@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.DAL.Tests", "DogApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.BLL.Tests", "DogApp.BLL.Tests\DogApp.BLL.Tests.csproj", "{92A814E7-47C1-47C2-B97C-A94604C4B82E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogApp.API.Tests", "DogApp.API.Tests\DogApp.API.Tests.csproj", "{754CC1F4-10D1-47A9-9C14-C8386E3763E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{92A814E7-47C1-47C2-B97C-A94604C4B82E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92A814E7-47C1-47C2-B97C-A94604C4B82E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92A814E7-47C1-47C2-B97C-A94604C4B82E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754CC1F4-10D1-47A9-9C14-C8386E3763E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754CC1F4-10D1-47A9-9C14-C8386E3763E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754CC1F4-10D1-47A9-9C14-C8386E3763E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754CC1F4-10D1-47A9-9C14-C8386E3763E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

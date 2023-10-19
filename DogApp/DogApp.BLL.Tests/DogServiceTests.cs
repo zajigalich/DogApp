@@ -52,6 +52,7 @@ public class DogServiceTests
 		var dog = await _dogService.CreateAsync(dogs);
 
 		// Assert
+		Assert.That(dog.Id, Is.Not.EqualTo(null));
 		Assert.That(dog.Name, Is.EqualTo("NewDog"));
 	}
 
